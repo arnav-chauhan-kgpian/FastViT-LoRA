@@ -2,6 +2,8 @@
 
 This codebase integrates **Low-Rank Adaptation (LoRA)** into **FastViT** (a hybrid CNN-Transformer architecture). Unlike standard LoRA, which targets Linear layers in Transformers, this implementation adapts `nn.Conv2d` layers to handle the spatial characteristics of FastViT's `RepMixer` and `MobileOne` blocks.
 
+I might use this quite conveniently for downstream tasks like image classification, etc.
+
 ### Core Features
 
 * **ConvLoRA Wrapper:** A custom `nn.Module` that wraps existing `nn.Conv2d` layers, freezing the original weights and injecting a trainable side path.
